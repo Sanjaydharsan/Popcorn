@@ -1,0 +1,57 @@
+@media screen and (max-width: 570px) {
+  
+    .banner-content,.card-content,.sub-heading,.footer,.user{
+       font-size: small;
+    }
+    .watch input{
+        padding: 5px 15px;
+        border-radius: 8px;  
+    }
+    .navbar{
+        padding: 10px;
+    }
+    
+    
+} 
+@media screen and (max-width: 990px) {
+    .nav-items,.searchbar{
+        display: none;
+    }
+    .nav-block{
+        column-gap: 10px;
+    }
+    .banner-content{
+        left: 20px;
+        bottom: 20px;
+    }
+
+    .container{
+        overflow-x: scroll;
+        padding: 0px 20px 20px 20px;
+    }
+    .container::-webkit-scrollbar{
+        display: none;
+    }
+    .footer-content{
+        flex-wrap: wrap;
+    }
+    .footer-link{
+        padding: 20px 0px;
+    }
+    .swipe a{
+        display: block;
+    }
+    .load a{
+        display: none;
+    }
+    .sub-heading{
+        padding: 30px;
+    }
+    .menu,.menu-btn{
+        display: block;
+    }
+    .login-page{
+        width: 60%;
+        left: 20%;
+    }
+}

@@ -1,0 +1,387 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: rgba(20,20,20);
+    cursor: default;
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+    border-left: 1px solid transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 4px;
+
+}
+
+/* navbar */
+
+.navbar {
+    display: flex;
+    font-family: sans-serif;
+    position: fixed;
+    width: 100%;
+    z-index: 200;
+    font-weight: bold;
+    font-size: small;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-block {
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+}
+
+.nav-heading {
+    color: red;
+    font-weight: 600;
+    padding-right: 50px;
+}
+
+.nav-items {
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+}
+
+.searchbar {
+    background-color: white;
+    color: red;
+    font-size: large;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+#searchbar {
+    height: 25px;
+    width: 300px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.nav-btn {
+    background-color: red;
+    border: none;
+    padding: 5px;
+    color: white;
+    border-radius: 15px;
+}
+
+.user {
+    color: white;
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+}
+
+.banner-img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.ban-gradient {
+    background-image: linear-gradient(to right, black, transparent);
+    height: 100vh;
+    width: 100%;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 1;
+}
+
+.banner-content {
+    color: white;
+    position: absolute;
+    bottom: 40px;
+    left: 60px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.watch :hover {
+    color: red;
+    background-color: rgb(28, 28, 28);
+}
+
+.watch input {
+    cursor: pointer;
+    padding: 15px 45px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 12px;
+    border: none;
+    background-color: red;
+}
+
+/* movie card */
+main {
+    padding-top: 20px;
+}
+
+.movie {
+    width: 160px;
+    height: 320px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 20px;
+}
+.card-overlay{
+    backdrop-filter: blur(2px);
+    background-color: transparent;
+    height: 250px;
+    width: 160px;
+    border-radius: 8px;
+    position: absolute;
+    z-index: 2;
+    display: none;
+    transition: 1s ease ;
+    text-align: center;
+}
+.card-overlay i{
+    transform: translateY(120px);
+    font-size: 32px;
+}
+
+.card-img {
+    height: 250px;
+    width: 160px;
+    object-fit: cover;
+    transition: 1s;
+    border-radius: 8px;
+    
+}
+
+.movie:hover .card-img {
+    transform: scale(1.05);
+
+}
+.movie:hover .card-overlay{
+    transform: scale(1.05);
+    display: block;
+
+}
+
+.card-content h5,
+h4 {
+    color: white;
+    margin-left: 2px;
+    margin-top: 10px;
+    transition: 1s;
+}
+
+.movie:hover .card-content h4 {
+    color: red;
+}
+
+.container {
+    width: 100%;
+    padding: 0px 40px 40px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sub-heading {
+    padding: 0px 60px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.load a {
+    color: grey;
+    font-size: small;
+}
+
+.load a:hover {
+    text-decoration: underline;
+}
+
+.swipe a {
+    color: grey;
+    font-size: small;
+    display: none;
+}
+
+/* 
+    ------------- footer -------------
+*/
+.footer {
+    padding: 40px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.footer-title h1 {
+    color: red;
+}
+
+.footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-link {
+    display: flex;
+    column-gap: 30px;
+    padding: 0px 40px;
+    justify-content: center;
+}
+
+.links {
+    padding: 5px;
+    cursor: pointer;
+    color: grey;
+}
+
+.links:hover {
+    color: red;
+}
+
+.social-media {
+    display: flex;
+    font-size: 40px;
+    justify-content: left;
+    column-gap: 25px;
+    cursor: pointer;
+}
+
+.copyright {
+    text-align: center;
+}
+
+hr {
+    margin: 20px 0px;
+}
+
+/* 
+------------ mobile screen element -----------
+*/
+.menu-btn{
+    display: none;
+    cursor: pointer;
+}
+.menu{
+    display: none;
+    font-size: small;
+    padding: 20px;
+    top: -100%;
+    position: fixed;
+    z-index: 250;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    transition: 0.7s ease;
+}
+.menu p{
+    padding: 10px;
+}
+.menu-head{
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ /* ************** login page **************** */
+
+.login-page{
+    background-color: rgba(0, 0, 0, 0.466);
+    transition: 1s ease;
+    border-radius: 15px;
+    width: 30%;
+    position: fixed;
+    z-index: 300;
+    top: -100%;
+    left: 35%;
+    padding: 30px;
+    text-align: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+}
+
+.login-page input{
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+}
+.login-page .input-box{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 5px ;
+    background-color: white;
+    border-radius: 12px;
+    margin: 20px 0px;
+}
+.login-page .input-box .fa-solid{
+      color: red;
+}
+.input-box input::placeholder {
+    color: black;
+}
+
+.forgot a {
+    text-decoration: none;
+    text-align: left;
+    color: red;
+}
+
+.forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 50%;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    margin: 20px 0;
+    font-weight: bold;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+.register {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.register p a {
+    text-decoration: none;
+    font-weight: 600;
+    color: red;
+}
+
+.register a:hover {
+    text-decoration: underline;
+}

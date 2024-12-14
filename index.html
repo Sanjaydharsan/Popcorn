@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POPCORN</title>
+
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+
+    <script src="index.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="navbar" id="navbar">
+
+        <div class="nav-block">
+
+            <div class="menu-btn" >
+                <p onclick="openMenu()"><i class="fa-solid fa-bars"></i></p>
+            </div>
+
+            <div class="nav-heading">
+                <h1>POPCORN</h1>
+            </div>
+
+            <div class="nav-items">
+                <p><a href="index.html">HOME</a></p>
+                <p><a href="#movies">MOVIES</a></p>
+                <p><a href="#shows">SHOWS</a></p>
+                <button class="nav-btn">Go Premium</button>
+            </div>
+        </div>
+
+        <div class="nav-block">
+
+            <div class="searchbar">
+                <input type="text" id="searchbar" placeholder="Search...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="user">
+                <p onclick="loginOpen()">SIGN IN</p>
+                <i class="fa-solid fa-arrow-right-to-bracket" style="color: red; font-size: large;"></i>
+            </div>
+
+        </div>
+    </div>
+
+<!--  ********* Mobile menu ************* -->
+
+    <div class="menu">
+        <div class="menu-head">
+
+            <div class="nav-heading">
+                <h1>POPCORN</h1>
+            </div>
+            <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+
+        </div>
+        <p><a href="index.html"onclick="closeMenu()">HOME</a></p>
+        <p><a href="#movies"onclick="closeMenu()">MOVIES</a></p>
+        <p><a href="#shows"onclick="closeMenu()">SHOWS</a></p>
+        <p><a href="#"onclick="closeMenu()">SIGN IN</a></p>
+
+    </div>
+
+    <!-- ***************** login page ******************* -->
+
+   
+
+        <div class="login-page">
+
+
+                <form action="">
+    
+                    <h2>Login or Sign up</h2>
+    
+                    <div class="input-box">
+                        <input type="text" placeholder="USERNAME" required>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+    
+                    <div class="input-box">
+                        <input type="password" placeholder="PASSWORD" required>
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+    
+                    <div class="forgot">
+                        <a href="#">Forgot password?</a>
+                    </div>
+    
+                    <button type="submit" class="btn">LOGIN</button>
+    
+                    <div class="register">
+                        <p>Don't have account?<a href="#">Register</a></p>
+                    </div>
+    
+                </form>
+                <i class="fa-solid fa-xmark" onclick="loginClose()"></i>
+
+
+    </div>
+
+
+    <div class="banner">
+        <div class="banner-card">
+            <div class="ban-gradient"></div>
+            <img src="img/avengers.jpg" class="banner-img" alt="bannerimg">
+        </div>
+
+        <div class="banner-content">
+
+            <h1 class="banner-title">AVENGERS: ENDGAME</h1><br>
+            <h3> 2019 ‧ Action/Sci-fi ‧ 3h 1m ‧ U/A</h3><br>
+            <P>After the devastating events of infinity war, the Avengers <br>assemble once more to reverse Thanos
+                action and restore <br> balance to the universe. </P><br><br>
+
+            <div class="watch">
+                <input type="button" value="WATCH NOW">
+            </div>
+        </div>
+
+        <main>
+            <div id="movies">
+                <div class="sub-heading">
+
+                    <h2>POPULAR MOVIES</h2>
+                    <div>
+                        <div class="load"><a>LOAD MORE <i class="fa-solid fa-angles-right"></i></a></div>
+                        <div class="swipe"><a>SWIPE <i class="fa-solid fa-angles-right"></i></a></div>
+                    </div>
+                </div>
+
+
+                <div class="container">
+
+                    <div class="movie">
+
+                        <div class="movie-card">
+                            <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                            <img src="img/movies/godzila kong.jpg" class="card-img" alt="image">
+                        </div>
+
+                        <div class="card-content">
+                            <h4>Godzilla vs Kong</h4>
+                            <h5>2021 ‧ Action/Sci-fi </h5>
+                        </div>
+
+                    </div>
+
+                    <div class="movie">
+
+                        <div class="movie-card">
+                            <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                            <img src="img/movies/venom.jpeg" class="card-img" alt="image">
+                        </div>
+
+                        <div class="card-content">
+                            <h4>Venom</h4>
+                            <h5>2018 ‧ Action/Sci-fi</h5>
+                        </div>
+
+                    </div>
+
+                    <div class="movie">
+
+                        <div class="movie-card">
+                            <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                            <img src="img/movies/F9_ The Fast Saga.jpeg" class="card-img" alt="image">
+                        </div>
+
+                        <div class="card-content">
+                            <h4>F9</h4>
+                            <h5>2021 ‧ Action/Adventure</h5>
+                        </div>
+
+                    </div>
+
+                    <div class="movie">
+
+                        <div class="movie-card">
+                            <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                            <img src="img/movies/transformers one.jpeg" class="card-img" alt="image">
+
+                        </div>
+
+                        <div class="card-content">
+                            <h4>Transformers One</h4>
+                            <h5>2024 ‧ Action/Sci-fi</h5>
+                        </div>
+
+                    </div>
+
+                    <div class="movie">
+
+                        <div class="movie-card">
+                            <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                            <img src="img/movies/madmax.jpeg" class="card-img" alt="image">
+                        </div>
+
+                        <div class="card-content">
+                            <h4>Mad Max: Fury Road</h4>
+                            <h5>2015 ‧ Action/Sci-fi</h5>
+                        </div>
+
+                    </div>
+
+
+                    <div class="movie">
+
+                        <div class="movie-card">
+                            <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                            <img src="img/movies/Dune_ Part Two.jpeg" class="card-img" alt="image">
+                        </div>
+
+                        <div class="card-content">
+                            <h4>Dune: Part Two</h4>
+                            <h5>2024 ‧ Sci-fi/Adventure </h5>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <!-- 
+            CONTAINER 3
+             -->
+
+
+                <div class="sub-heading">
+
+                    <h2>TOP RATED MOVIES</h2>
+                    <div>
+                        <div class="load"><a>LOAD MORE <i class="fa-solid fa-angles-right"></i></a></div>
+                        <div class="swipe"><a>SWIPE <i class="fa-solid fa-angles-right"></i></a></div>
+                    </div>
+                </div>
+
+                <div class="container">
+
+                    <div class="movie">
+                        
+                        <div class="movie-card">
+                            <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                            <img src="img/movies/The Shawshank Redemption.jpeg" class="card-img" alt="image">
+                        </div>
+
+                        <div class="card-content">
+                            <h4>The Shawshank Redemption</h4>
+                            <h5>1994 ‧ Thriller/Crime</h5>
+                        </div>
+                    </div>
+
+                    <div class="movie">
+
+                        <div class="movie-card">
+                            <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                            <img src="img/movies/godfather.jpeg" class="card-img" alt="image">
+                        </div>
+
+                        <div class="card-content">
+                            <h4>The Godfather</h4>
+                            <h5>1972 ‧ Crime</h5>
+                        </div>
+
+                    </div>
+
+                    <div class="movie">
+
+                        <div class="movie-card">
+                            <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                            <img src="img/movies/dark knight.jpeg" class="card-img" alt="image">
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <h4>The Dark Knight</h4>
+                            <h5>2008 ‧ Crime/Thriller</h5>
+
+                        </div>
+
+                    </div>
+
+                    <div class="movie">
+
+                        <div class="movie-card">
+                            <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                            <img src="img/movies/interstellar.jpeg" class="card-img" alt="image">
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <h4>Interstellar</h4>
+                            <h5>2014 ‧ Sci-fi/Adventure</h5>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="movie">
+
+                        <div class="movie-card">
+                            <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                            <img src="img/movies/memento.jpeg" class="card-img" alt="image">
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <h4>Memento</h4>
+                            <h5>2000 ‧ Thriller/Crime</h5>
+
+                        </div>
+
+                    </div>
+
+                    <div class="movie">
+
+                        <div class="movie-card">
+                            <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                            <img src="img/movies/inception.jpg" class="card-img" alt="image">
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <h4>Inception</h4>
+                            <h5>2010 ‧ Sci-fi/Action</h5>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <!-- 
+         ---------------- marvel ------------     
+
+-->
+                <div class="sub-heading">
+
+                    <h2>MARVEL'S INFINTY SAGA</h2>
+                    <div>
+                        <div class="load"><a>LOAD MORE <i class="fa-solid fa-angles-right"></i></a></div>
+                        <div class="swipe"><a>SWIPE <i class="fa-solid fa-angles-right"></i></a></div>
+                    </div>
+                </div>
+
+
+                <div class="container">
+
+                    <div class="movie">
+
+                        <div class="movie-card">
+                            <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                            <img src="img/movies/infinty war.jpeg" class="card-img" alt="image">
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <h4>Avengers: Infinty War</h4>
+                            <h5>2018 ‧ Action/Sci-fi </h5>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="movie">
+
+                        <div class="movie-card">
+                            <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                            <img src="img/movies/thor ragnork.jpeg" class="card-img" alt="image">
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <h4>Thor: Ragnarok</h4>
+                            <h5>2017 ‧ Action/Sci-fi</h5>
+
+                        </div>
+
+                    </div>
+
+                    <div class="movie">
+
+                        <div class="movie-card">
+                            <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                            <img src="img/movies/captain marvel.jpeg" class="card-img" alt="image">
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <h4>Captain Marvel</h4>
+                            <h5> 2019 ‧ Action/Adventure</h5>
+
+                        </div>
+
+                    </div>
+
+                    <div class="movie">
+
+                        <div class="movie-card">
+                            <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                            <img src="img/movies/black panther.jpeg" class="card-img" alt="image">
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <h4>Black Panther</h4>
+                            <h5>2018 ‧ Action/Sci-fi</h5>
+
+                        </div>
+
+                    </div>
+
+                    <div class="movie">
+
+                        <div class="movie-card">
+                            <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                            <img src="img/movies/black widow.jpeg" class="card-img" alt="image">
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <h4>Black Widow</h4>
+                            <h5>2018 ‧ Action/Sci-fi</h5>
+
+                        </div>
+
+                    </div>
+
+                    <div class="movie">
+
+                        <div class="movie-card">
+                            <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                            <img src="img/movies/Doctor Strange Poster.jpeg" class="card-img" alt="image">
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <h4>Doctor Strange</h4>
+                            <h5>2016 ‧ Action/Fantasy</h5>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <!-- 
+ ------------ dc ------------------
+-->
+
+                <div class="sub-heading">
+
+                    <h2>DC COMICS</h2>
+                    <div>
+                        <div class="load"><a>LOAD MORE <i class="fa-solid fa-angles-right"></i></a></div>
+                        <div class="swipe"><a>SWIPE <i class="fa-solid fa-angles-right"></i></a></div>
+                    </div>
+                </div>
+
+
+                <div class="container">
+
+                    <div class="movie">
+
+                        <div class="movie-card">
+                            <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                            <img src="img/movies/man of steel.jpeg" class="card-img" alt="image">
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <h4>Man of Steel</h4>
+                            <h5>2013 ‧ Action/Sci-fi </h5>
+
+                        </div>
+
+                    </div>
+
+                    <div class="movie">
+
+                        <div class="movie-card">
+                            <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                            <img src="img/movies/black adam.jpg" class="card-img" alt="image">
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <h4>Black Adam</h4>
+                            <h5>2022 ‧ Action/Adventure</h5>
+
+                        </div>
+
+                    </div>
+
+                    <div class="movie">
+
+                        <div class="movie-card">
+                            <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                            <img src="img/movies/batman.jpg" class="card-img" alt="image">
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <h4>The Dark Knight Rises</h4>
+                            <h5>2012 ‧ Action/Thriller</h5>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="movie">
+
+                        <div class="movie-card">
+                            <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                            <img src="img/movies/aquaman.jpg" class="card-img" alt="image">
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <h4>Aquaman</h4>
+                            <h5>2018 ‧ Action/Adventure </h5>
+
+                        </div>
+
+                    </div>
+
+                    <div class="movie">
+
+                        <div class="movie-card">
+                            <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                            <img src="img/movies/ww84.jpg" class="card-img" alt="image">
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <h4>Wonder Women 1984</h4>
+                            <h5>2020 ‧ Action/Adventure </h5>
+
+                        </div>
+
+                    </div>
+
+                    <div class="movie">
+
+                        <div class="movie-card">
+                            <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                            <img src="img/movies/flash.jpeg" class="card-img" alt="image">
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <h4>The Flash</h4>
+                            <h5>2023 ‧ Action/Sci-fi</h5>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 
+                    ---------- container 2 ------------
+                 -->
+            <div id="shows"></div>
+            <div class="sub-heading">
+
+                <h2>POPULAR SHOWS</h2>
+                <div>
+                    <div class="load"><a>LOAD MORE <i class="fa-solid fa-angles-right"></i></a></div>
+                    <div class="swipe"><a>SWIPE <i class="fa-solid fa-angles-right"></i></a></div>
+                </div>
+            </div>
+
+
+            <div class="container">
+                <div class="movie">
+
+                    <div class="movie-card">
+                        <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                        <img src="img/shows/got.jpg" class="card-img" alt="image">
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <h4>Game of Thrones</h4>
+                        <h5>2011 ‧ Drama ‧ 8 seasons</h5>
+
+                    </div>
+
+                </div>
+
+                <div class="movie">
+
+                    <div class="movie-card">
+                        <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                        <img src="img/shows/money heist.jpg" class="card-img" alt="image">
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <h4>Money Heist</h4>
+                        <h5>2017 ‧ Thriller ‧ 5 seasons</h5>
+
+                    </div>
+
+                </div>
+
+                <div class="movie">
+
+                    <div class="movie-card">
+                        <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                        <img src="img/shows/bb.jpg" class="card-img" alt="image">
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <h4>Breaking Bad</h4>
+                        <h5>2008 ‧ Drama ‧ 5 seasons</h5>
+
+                    </div>
+
+                </div>
+
+                <div class="movie">
+
+                    <div class="movie-card">
+                        <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                        <img src="img/shows/planet earth.jpg" class="card-img" alt="image">
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <h4>Planet Earth II</h4>
+                        <h5>2016 ‧ Documentary ‧ 1 season</h5>
+
+                    </div>
+
+                </div>
+
+                <div class="movie">
+
+                    <div class="movie-card">
+                        <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                        <img src="img/shows/boys.jpeg" class="card-img" alt="image">
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <h4>The Boys</h4>
+                        <h5>2019 ‧ Drama ‧ 4 seasons</h5>
+
+                    </div>
+
+                </div>
+
+                <div class="movie">
+
+                    <div class="movie-card">
+                        <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                        <img src="img/shows/walking dead.jpg" class="card-img" alt="image">
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <h4>Walking Dead</h4>
+                        <h5>2010 ‧ Drama ‧ 11 seasons</h5>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- 
+            --------------- anime -----------------
+            -->
+
+            <div class="sub-heading">
+
+                <h2>TRENDING ANIME</h2>
+                <div>
+                    <div class="load"><a>LOAD MORE <i class="fa-solid fa-angles-right"></i></a></div>
+                    <div class="swipe"><a>SWIPE <i class="fa-solid fa-angles-right"></i></a></div>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="movie">
+
+                    <div class="movie-card">
+                        <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                        <img src="img/shows/demon slayer.jpg" class="card-img" alt="image">
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <h4>Demon Slayer</h4>
+                        <h5>2019 ‧ Anime ‧ 4 seasons</h5>
+
+                    </div>
+
+                </div>
+
+                <div class="movie">
+
+                    <div class="movie-card">
+                        <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                        <img src="img/shows/blue eye samurai.jpg" class="card-img" alt="image">
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <h4>Blue Eye Samurai</h4>
+                        <h5>2023 ‧ Action ‧ 1 season</h5>
+
+                    </div>
+
+                </div>
+
+                <div class="movie">
+
+                    <div class="movie-card">
+                        <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                        <img src="img/shows/attack on titan.jpg" class="card-img" alt="image">
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <h4>Attack on Titan</h4>
+                        <h5>2013 ‧ Action ‧ 3 seasons</h5>
+
+                    </div>
+
+                </div>
+
+                <div class="movie">
+
+                    <div class="movie-card">
+                        <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                        <img src="img/shows/dargon ballz.jpg" class="card-img" alt="image">
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <h4>Dargan Ball Super</h4>
+                        <h5>1989 ‧ Adventure ‧ 9 seasons</h5>
+
+                    </div>
+
+                </div>
+
+                <div class="movie">
+
+                    <div class="movie-card">
+                        <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                        <img src="img/shows/naruto.jpeg" class="card-img" alt="image">
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <h4>Naruto:Shippuden</h4>
+                        <h5> Adventure ‧ 21 seasons</h5>
+
+                    </div>
+
+                </div>
+                <div class="movie">
+
+                    <div class="movie-card">
+                        <div class="card-overlay"><i class="fa-regular fa-circle-play"></i></div>
+
+                        <img src="img/shows/onepiece.jpeg" class="card-img" alt="image">
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <h4>One Piece</h4>
+                        <h5>Adventure ‧ 20 seasons</h5>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </main>
+        <!-- footer -->
+
+        <div class="footer">
+
+            <div class="footer-content">
+
+                <div class="footer-title">
+                    <h1>POPCORN</h1>
+                    <h4>ONLINE STREAMING WEBSITE</h4>
+                </div>
+                    <div class="footer-link">
+                        <ul>
+                            <h4>POPCORN</h4>
+                            <br>
+
+                            <li class="links">About</li>
+                            <li class="links">Help</li>
+                            <li class="links">Contact</li>
+                            <li class="links">FAQ</li>
+                        </ul>
+                        <ul>
+                            <h4>BROWSE</h4>
+                            <br>
+
+                            <li class="links">Movies</li>
+                            <li class="links">Shows</li>
+                            <li class="links">Kids</li>
+                            <li class="links">Live TV</li>
+                        </ul>
+                        <ul>
+                            <h4>CATEGORY</h4>
+                            <br>
+
+                            <li class="links">Action</li>
+                            <li class="links">Sci-fi</li>
+                            <li class="links">Thriller</li>
+                            <li class="links">Horror</li>
+                        </ul>
+                    </div>
+            </div>
+
+            <div class="social-media">
+                <p><i class="fa-brands fa-square-instagram"></i></p>
+                <p><i class="fa-brands fa-square-facebook"></i></p>
+                <p><i class="fa-brands fa-square-x-twitter"></i></p>
+            </div>
+            <hr>
+
+            <div class="copyright">
+                <h5>&copy; COPYRIGHT 2024 SANJAY </h5>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
