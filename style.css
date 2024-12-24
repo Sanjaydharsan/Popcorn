@@ -148,6 +148,9 @@ main {
     cursor: pointer;
     margin: 20px;
 }
+.movie-card{
+    position: relative;
+}
 .card-overlay{
     backdrop-filter: blur(2px);
     background-color: transparent;
@@ -163,6 +166,8 @@ main {
 .card-overlay i{
     transform: translateY(120px);
     font-size: 32px;
+
+    
 }
 
 .card-img {
