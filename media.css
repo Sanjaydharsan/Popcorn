@@ -1,72 +1,57 @@
-/* Responsive styles for smaller screens */
-
+@media screen and (max-width: 570px) {
+  
+    .banner-content,.card-content,.sub-heading,.footer,.user{
+       font-size: small;
+    }
+    .watch input{
+        padding: 5px 15px;
+        border-radius: 8px;  
+    }
+    .navbar{
+        padding: 10px;
+    }
+    
+    
+} 
 @media screen and (max-width: 990px) {
-    /* Hide navigation items and search bar on smaller screens */
-    .nav-items, .searchbar {
+    .nav-items,.searchbar{
         display: none;
     }
-    
-    .nav-block {
+    .nav-block{
         column-gap: 10px;
     }
-    
-    .banner-content {
+    .banner-content{
         left: 20px;
         bottom: 20px;
     }
-    
-    /* Enable horizontal scrolling for movie container */
-    .container {
+
+    .container{
         overflow-x: scroll;
-        padding: 0 20px 20px;
+        padding: 0px 20px 20px 20px;
     }
-    
-    .container::-webkit-scrollbar {
+    .container::-webkit-scrollbar{
         display: none;
     }
-    
-    .footer-content {
+    .footer-content{
         flex-wrap: wrap;
     }
-    
-    .footer-link {
-        padding: 20px 0;
+    .footer-link{
+        padding: 20px 0px;
     }
-    
-    .swipe a {
+    .swipe a{
         display: block;
     }
-    
-    .load a {
+    .load a{
         display: none;
     }
-    
-    .sub-heading {
+    .sub-heading{
         padding: 30px;
     }
-    
-    .menu, .menu-btn {
+    .menu,.menu-btn{
         display: block;
     }
-    
-    .login-page {
+    .login-page{
         width: 60%;
         left: 20%;
-    }
-}
-
-@media screen and (max-width: 570px) {
-    /* Reduce font size for better readability on small screens */
-    .banner-content, .card-content, .sub-heading, .footer, .user {
-        font-size: small;
-    }
-    
-    .watch input {
-        padding: 5px 15px;
-        border-radius: 8px;
-    }
-    
-    .navbar {
-        padding: 10px;
     }
 }

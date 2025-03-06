@@ -1,16 +1,11 @@
-/* Reset default styles */
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-/* Global styles */
-body {
-    font-family: sans-serif;
-    background-color: #141414;
-    color: white;
-    cursor: default;
+ul {
+    list-style: none;
 }
 
 a {
@@ -18,44 +13,56 @@ a {
     color: white;
 }
 
-ul {
-    list-style: none;
+body {
+    font-family: sans-serif;
+    background-color: rgba(20,20,20);
+    cursor: default;
+    color: white;
 }
 
-/* Scrollbar styles */
 ::-webkit-scrollbar {
     width: 8px;
     background: transparent;
     border-left: 1px solid transparent;
 }
+
 ::-webkit-scrollbar-thumb {
     background: red;
     border-radius: 4px;
+
 }
 
-/* Navbar styles */
+/* navbar */
+
 .navbar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    font-family: sans-serif;
     position: fixed;
     width: 100%;
-    padding: 20px;
     z-index: 200;
     font-weight: bold;
     font-size: small;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-block {
     display: flex;
+    column-gap: 30px;
     align-items: center;
-    gap: 30px;
 }
 
 .nav-heading {
     color: red;
     font-weight: 600;
     padding-right: 50px;
+}
+
+.nav-items {
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
 }
 
 .searchbar {
@@ -67,11 +74,11 @@ ul {
 }
 
 #searchbar {
-    width: 300px;
     height: 25px;
+    width: 300px;
+    background-color: transparent;
     border: none;
     outline: none;
-    background: transparent;
 }
 
 .nav-btn {
@@ -82,85 +89,151 @@ ul {
     border-radius: 15px;
 }
 
-/* Banner styles */
+.user {
+    color: white;
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+}
+
 .banner-img {
-    width: 100%;
     height: 100vh;
+    width: 100%;
     object-fit: cover;
 }
 
 .ban-gradient {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
     background-image: linear-gradient(to right, black, transparent);
+    height: 100vh;
+    width: 100%;
     border-radius: 20px;
+    position: absolute;
     z-index: 1;
 }
 
 .banner-content {
+    color: white;
     position: absolute;
     bottom: 40px;
     left: 60px;
+    cursor: pointer;
     z-index: 2;
+}
+
+.watch :hover {
+    color: red;
+    background-color: rgb(28, 28, 28);
 }
 
 .watch input {
     cursor: pointer;
     padding: 15px 45px;
     color: white;
+    font-family: sans-serif;
     font-weight: bold;
     border-radius: 12px;
     border: none;
     background-color: red;
 }
-.watch input:hover {
-    background-color: rgb(28, 28, 28);
-    color: red;
+
+/* movie card */
+main {
+    padding-top: 20px;
 }
 
-/* Movie card styles */
 .movie {
     width: 160px;
     height: 320px;
     border-radius: 8px;
     cursor: pointer;
     margin: 20px;
+}
+.movie-card{
     position: relative;
 }
-
-.card-overlay {
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    background-color: transparent;
+.card-overlay{
     backdrop-filter: blur(2px);
+    background-color: transparent;
+    height: 250px;
+    width: 160px;
     border-radius: 8px;
+    position: absolute;
+    z-index: 2;
     display: none;
+    transition: 1s ease ;
     text-align: center;
-    transition: 0.5s ease;
 }
-
-.card-overlay i {
+.card-overlay i{
     transform: translateY(120px);
     font-size: 32px;
+
+    
 }
 
 .card-img {
-    width: 100%;
     height: 250px;
+    width: 160px;
     object-fit: cover;
+    transition: 1s;
     border-radius: 8px;
-    transition: 0.5s;
+    
 }
 
-.movie:hover .card-img,
-.movie:hover .card-overlay {
+.movie:hover .card-img {
+    transform: scale(1.05);
+
+}
+.movie:hover .card-overlay{
     transform: scale(1.05);
     display: block;
+
 }
 
-/* Footer styles */
+.card-content h5,
+h4 {
+    color: white;
+    margin-left: 2px;
+    margin-top: 10px;
+    transition: 1s;
+}
+
+.movie:hover .card-content h4 {
+    color: red;
+}
+
+.container {
+    width: 100%;
+    padding: 0px 40px 40px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sub-heading {
+    padding: 0px 60px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.load a {
+    color: grey;
+    font-size: small;
+}
+
+.load a:hover {
+    text-decoration: underline;
+}
+
+.swipe a {
+    color: grey;
+    font-size: small;
+    display: none;
+}
+
+/* 
+    ------------- footer -------------
+*/
 .footer {
     padding: 40px;
     margin-top: 40px;
@@ -172,14 +245,16 @@ ul {
 }
 
 .footer-content {
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
 .footer-link {
     display: flex;
-    gap: 30px;
-    padding: 0 40px;
+    column-gap: 30px;
+    padding: 0px 40px;
+    justify-content: center;
 }
 
 .links {
@@ -187,14 +262,16 @@ ul {
     cursor: pointer;
     color: grey;
 }
+
 .links:hover {
     color: red;
 }
 
 .social-media {
     display: flex;
-    gap: 25px;
     font-size: 40px;
+    justify-content: left;
+    column-gap: 25px;
     cursor: pointer;
 }
 
@@ -202,73 +279,85 @@ ul {
     text-align: center;
 }
 
-/* Mobile menu */
-.menu-btn {
+hr {
+    margin: 20px 0px;
+}
+
+/* 
+------------ mobile screen element -----------
+*/
+.menu-btn{
     display: none;
     cursor: pointer;
 }
-
-.menu {
-    position: fixed;
-    top: -100%;
-    width: 100%;
-    background-color: black;
+.menu{
+    display: none;
+    font-size: small;
     padding: 20px;
-    transition: 0.7s ease;
+    top: -100%;
+    position: fixed;
     z-index: 250;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    transition: 0.7s ease;
 }
-
-.menu p {
+.menu p{
     padding: 10px;
 }
-
-.menu-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.menu-head{
     padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-/* Login page */
-.login-page {
+ /* ************** login page **************** */
+
+.login-page{
+    background-color: rgba(0, 0, 0, 0.466);
+    transition: 1s ease;
+    border-radius: 15px;
+    width: 30%;
     position: fixed;
+    z-index: 300;
     top: -100%;
     left: 35%;
-    width: 30%;
-    background-color: rgba(0, 0, 0, 0.466);
     padding: 30px;
-    border-radius: 15px;
     text-align: center;
+    justify-content: center;
     backdrop-filter: blur(8px);
-    transition: 1s ease;
-    z-index: 300;
 }
 
-.input-box {
-    display: flex;
-    align-items: center;
-    padding: 5px;
-    background-color: white;
-    border-radius: 12px;
-    margin: 20px 0;
-}
-
-.input-box input {
+.login-page input{
     width: 100%;
     height: 30px;
     border: none;
-    background: transparent;
     outline: none;
-}
+    background-color: transparent;
 
-.input-box .fa-solid {
-    color: red;
+}
+.login-page .input-box{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 5px ;
+    background-color: white;
+    border-radius: 12px;
+    margin: 20px 0px;
+}
+.login-page .input-box .fa-solid{
+      color: red;
+}
+.input-box input::placeholder {
+    color: black;
 }
 
 .forgot a {
-    color: red;
     text-decoration: none;
+    text-align: left;
+    color: red;
 }
+
 .forgot a:hover {
     text-decoration: underline;
 }
@@ -276,20 +365,28 @@ ul {
 .btn {
     width: 50%;
     height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    margin: 20px 0;
+    font-weight: bold;
     background-color: red;
     color: white;
-    border: none;
-    border-radius: 40px;
-    font-weight: bold;
     cursor: pointer;
-    margin: 20px 0;
 }
 
-.register a {
-    color: red;
-    font-weight: 600;
-    text-decoration: none;
+.register {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
 }
+
+.register p a {
+    text-decoration: none;
+    font-weight: 600;
+    color: red;
+}
+
 .register a:hover {
     text-decoration: underline;
 }
