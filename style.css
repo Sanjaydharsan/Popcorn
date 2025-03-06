@@ -1,11 +1,16 @@
+/* Reset default styles */
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-ul {
-    list-style: none;
+/* Global styles */
+body {
+    font-family: sans-serif;
+    background-color: #141414;
+    color: white;
+    cursor: default;
 }
 
 a {
@@ -13,56 +18,44 @@ a {
     color: white;
 }
 
-body {
-    font-family: sans-serif;
-    background-color: rgba(20,20,20);
-    cursor: default;
-    color: white;
+ul {
+    list-style: none;
 }
 
+/* Scrollbar styles */
 ::-webkit-scrollbar {
     width: 8px;
     background: transparent;
     border-left: 1px solid transparent;
 }
-
 ::-webkit-scrollbar-thumb {
     background: red;
     border-radius: 4px;
-
 }
 
-/* navbar */
-
+/* Navbar styles */
 .navbar {
     display: flex;
-    font-family: sans-serif;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     width: 100%;
+    padding: 20px;
     z-index: 200;
     font-weight: bold;
     font-size: small;
-    padding: 20px;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .nav-block {
     display: flex;
-    column-gap: 30px;
     align-items: center;
+    gap: 30px;
 }
 
 .nav-heading {
     color: red;
     font-weight: 600;
     padding-right: 50px;
-}
-
-.nav-items {
-    display: flex;
-    column-gap: 30px;
-    align-items: center;
 }
 
 .searchbar {
@@ -74,11 +67,11 @@ body {
 }
 
 #searchbar {
-    height: 25px;
     width: 300px;
-    background-color: transparent;
+    height: 25px;
     border: none;
     outline: none;
+    background: transparent;
 }
 
 .nav-btn {
@@ -89,151 +82,85 @@ body {
     border-radius: 15px;
 }
 
-.user {
-    color: white;
-    display: flex;
-    align-items: center;
-    column-gap: 4px;
-}
-
+/* Banner styles */
 .banner-img {
-    height: 100vh;
     width: 100%;
+    height: 100vh;
     object-fit: cover;
 }
 
 .ban-gradient {
-    background-image: linear-gradient(to right, black, transparent);
-    height: 100vh;
-    width: 100%;
-    border-radius: 20px;
     position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right, black, transparent);
+    border-radius: 20px;
     z-index: 1;
 }
 
 .banner-content {
-    color: white;
     position: absolute;
     bottom: 40px;
     left: 60px;
-    cursor: pointer;
     z-index: 2;
-}
-
-.watch :hover {
-    color: red;
-    background-color: rgb(28, 28, 28);
 }
 
 .watch input {
     cursor: pointer;
     padding: 15px 45px;
     color: white;
-    font-family: sans-serif;
     font-weight: bold;
     border-radius: 12px;
     border: none;
     background-color: red;
 }
-
-/* movie card */
-main {
-    padding-top: 20px;
+.watch input:hover {
+    background-color: rgb(28, 28, 28);
+    color: red;
 }
 
+/* Movie card styles */
 .movie {
     width: 160px;
     height: 320px;
     border-radius: 8px;
     cursor: pointer;
     margin: 20px;
-}
-.movie-card{
     position: relative;
 }
-.card-overlay{
-    backdrop-filter: blur(2px);
-    background-color: transparent;
-    height: 250px;
-    width: 160px;
-    border-radius: 8px;
+
+.card-overlay {
     position: absolute;
-    z-index: 2;
+    width: 100%;
+    height: 250px;
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    border-radius: 8px;
     display: none;
-    transition: 1s ease ;
     text-align: center;
+    transition: 0.5s ease;
 }
-.card-overlay i{
+
+.card-overlay i {
     transform: translateY(120px);
     font-size: 32px;
-
-    
 }
 
 .card-img {
+    width: 100%;
     height: 250px;
-    width: 160px;
     object-fit: cover;
-    transition: 1s;
     border-radius: 8px;
-    
+    transition: 0.5s;
 }
 
-.movie:hover .card-img {
-    transform: scale(1.05);
-
-}
-.movie:hover .card-overlay{
+.movie:hover .card-img,
+.movie:hover .card-overlay {
     transform: scale(1.05);
     display: block;
-
 }
 
-.card-content h5,
-h4 {
-    color: white;
-    margin-left: 2px;
-    margin-top: 10px;
-    transition: 1s;
-}
-
-.movie:hover .card-content h4 {
-    color: red;
-}
-
-.container {
-    width: 100%;
-    padding: 0px 40px 40px 40px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.sub-heading {
-    padding: 0px 60px;
-    padding-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.load a {
-    color: grey;
-    font-size: small;
-}
-
-.load a:hover {
-    text-decoration: underline;
-}
-
-.swipe a {
-    color: grey;
-    font-size: small;
-    display: none;
-}
-
-/* 
-    ------------- footer -------------
-*/
+/* Footer styles */
 .footer {
     padding: 40px;
     margin-top: 40px;
@@ -245,16 +172,14 @@ h4 {
 }
 
 .footer-content {
-    width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
 .footer-link {
     display: flex;
-    column-gap: 30px;
-    padding: 0px 40px;
-    justify-content: center;
+    gap: 30px;
+    padding: 0 40px;
 }
 
 .links {
@@ -262,16 +187,14 @@ h4 {
     cursor: pointer;
     color: grey;
 }
-
 .links:hover {
     color: red;
 }
 
 .social-media {
     display: flex;
+    gap: 25px;
     font-size: 40px;
-    justify-content: left;
-    column-gap: 25px;
     cursor: pointer;
 }
 
@@ -279,85 +202,73 @@ h4 {
     text-align: center;
 }
 
-hr {
-    margin: 20px 0px;
-}
-
-/* 
------------- mobile screen element -----------
-*/
-.menu-btn{
+/* Mobile menu */
+.menu-btn {
     display: none;
     cursor: pointer;
 }
-.menu{
-    display: none;
-    font-size: small;
-    padding: 20px;
-    top: -100%;
+
+.menu {
     position: fixed;
-    z-index: 250;
+    top: -100%;
     width: 100%;
-    background-color: rgb(0, 0, 0);
+    background-color: black;
+    padding: 20px;
     transition: 0.7s ease;
+    z-index: 250;
 }
-.menu p{
+
+.menu p {
     padding: 10px;
 }
-.menu-head{
-    padding-bottom: 10px;
+
+.menu-head {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
 }
 
- /* ************** login page **************** */
-
-.login-page{
-    background-color: rgba(0, 0, 0, 0.466);
-    transition: 1s ease;
-    border-radius: 15px;
-    width: 30%;
+/* Login page */
+.login-page {
     position: fixed;
-    z-index: 300;
     top: -100%;
     left: 35%;
+    width: 30%;
+    background-color: rgba(0, 0, 0, 0.466);
     padding: 30px;
+    border-radius: 15px;
     text-align: center;
-    justify-content: center;
     backdrop-filter: blur(8px);
+    transition: 1s ease;
+    z-index: 300;
 }
 
-.login-page input{
+.input-box {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: white;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.input-box input {
     width: 100%;
     height: 30px;
     border: none;
+    background: transparent;
     outline: none;
-    background-color: transparent;
-
-}
-.login-page .input-box{
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    padding: 5px ;
-    background-color: white;
-    border-radius: 12px;
-    margin: 20px 0px;
-}
-.login-page .input-box .fa-solid{
-      color: red;
-}
-.input-box input::placeholder {
-    color: black;
 }
 
-.forgot a {
-    text-decoration: none;
-    text-align: left;
+.input-box .fa-solid {
     color: red;
 }
 
+.forgot a {
+    color: red;
+    text-decoration: none;
+}
 .forgot a:hover {
     text-decoration: underline;
 }
@@ -365,28 +276,20 @@ hr {
 .btn {
     width: 50%;
     height: 40px;
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    margin: 20px 0;
-    font-weight: bold;
     background-color: red;
     color: white;
+    border: none;
+    border-radius: 40px;
+    font-weight: bold;
     cursor: pointer;
+    margin: 20px 0;
 }
 
-.register {
-    text-align: center;
-    color: white;
-    margin-bottom: 20px;
-}
-
-.register p a {
-    text-decoration: none;
-    font-weight: 600;
+.register a {
     color: red;
+    font-weight: 600;
+    text-decoration: none;
 }
-
 .register a:hover {
     text-decoration: underline;
 }

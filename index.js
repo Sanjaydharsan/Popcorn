@@ -1,32 +1,30 @@
-window.onscroll = function () { scrollFunction() };
+// Handle navbar background change on scroll
+window.onscroll = function () {
+    toggleNavbarBackground();
+};
 
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("navbar").style.backgroundColor = "black";
-    } else {
-        document.getElementById("navbar").style.backgroundColor = "transparent";
-    }
+function toggleNavbarBackground() {
+    const navbar = document.getElementById("navbar");
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    navbar.style.backgroundColor = scrollTop > 20 ? "black" : "transparent";
 }
 
-
-
+// Function to open the mobile menu
 function openMenu() {
-
-    var menu = document.querySelector(".menu")
-    menu.style.top = "0%"
+    document.querySelector(".menu").style.top = "0%";
 }
 
-function closeMenu(){
-    var menu = document.querySelector(".menu")
-    menu.style.top = "-100%"
-
-}
-function loginOpen(){
-    var login = document.querySelector(".login-page")
-    login.style.top = "15%"
+// Function to close the mobile menu
+function closeMenu() {
+    document.querySelector(".menu").style.top = "-100%";
 }
 
-function loginClose(){
-    var login = document.querySelector(".login-page")
-    login.style.top = "-100%"
+// Function to open the login page
+function loginOpen() {
+    document.querySelector(".login-page").style.top = "15%";
+}
+
+// Function to close the login page
+function loginClose() {
+    document.querySelector(".login-page").style.top = "-100%";
 }
